@@ -1,0 +1,11 @@
+{
+  "name": "hemera",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf build/* && sass src/index.scss build/index.css"
+  },
+  "dependencies": {
+    "sass": "^1.39.0"
+  }
+}
