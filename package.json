@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf build/* && sass src/index.scss build/index.css"
+    "build": "rimraf build/* && sass --load-path=\"./node_modules/normalize.css/\" src/index.scss build/index.css"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
+    "rimraf": "^3.0.2",
     "sass": "^1.39.0"
   }
 }

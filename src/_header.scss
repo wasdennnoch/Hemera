@@ -1,0 +1,71 @@
+@use "variables";
+
+.header {
+    height: var(--height-header);
+    border-bottom: 1px solid var(--color-border-main);
+    padding: 0 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-logo {
+    text-align: center;
+
+    a {
+        text-decoration: none;
+    }
+
+    &, & img {
+        height: 36px;
+    }
+}
+
+.header-title {
+    display: none;
+}
+
+.header-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 16px;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+
+@media (min-width: variables.$width-medium) {
+    .header-title {
+        display: block;
+        margin: 0 32px;
+        text-decoration: none;
+        color: inherit;
+    
+        h1 {
+            font-size: 25px;
+            margin: 0;
+        }
+    }
+}
+
+@media (min-width: variables.$width-large) {
+    .header {
+        padding: 0 16px 0 0;
+    }
+
+    .header-logo {
+        width: var(--width-navigation);
+    }
+
+}

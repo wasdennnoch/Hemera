@@ -1,0 +1,43 @@
+.form-row {
+    margin-bottom: 16px;
+}
+
+.form-label {
+    display: block;
+
+    .form-input {
+        display: block;
+        margin-top: 4px;
+    }
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid var(--color-border-main);
+    border-radius: 4px;
+    font-size: medium;
+    font-family: inherit;
+
+    &:disabled {
+        cursor: not-allowed;
+        color: var(--color-text-muted);
+    }
+}
+
+.form input[type=submit] {
+    margin-top: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+select:invalid {
+    color: var(--color-text-muted);
+
+    option {
+        color: var(--color-text-main);
+    }
+}

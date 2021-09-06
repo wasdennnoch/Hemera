@@ -1,0 +1,45 @@
+@use "variables";
+
+.hemera-root {
+    padding: 0 16px;
+}
+
+.hemera-app {
+    max-width: var(--width-app);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-root {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.content {
+    margin-bottom: 16px;
+}
+
+@media (min-width: variables.$width-large) {
+    .hemera-root {
+        padding: 0 32px;
+    }
+
+    .content-root {
+        margin-top: 32px;
+        flex-direction: row;
+    }
+
+    .content-root,
+    .navigation,
+    .content {
+        /* Body height - Header height - Content root top margin - Content bottom margin */
+        min-height: calc(100vh - var(--height-header) - 32px - 32px);
+    }
+
+    .content {
+        margin-bottom: 32px;
+        padding: 0 32px 32px 32px;
+        flex-grow: 1;
+    }
+}

@@ -1,5 +1,9 @@
-@import "./variables";
-
-* {
-    color: $some-color;
-}
+@use "normalize";
+@use "variables";
+@use "base";
+@use "app";
+@use "header";
+@use "nav";
+@use "widgets";
+@use "forms";
+@use "modals";

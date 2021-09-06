@@ -1,1 +1,43 @@
-$some-color: red;
+$width-medium: 992px;
+$width-large: 992px;
+
+$color-accent: #0193de;
+$color-success: #00dd67;
+$color-info: $color-accent;
+$color-warn: #f0b30c;
+$color-danger: #d81e1e;
+
+:root {
+    --color-accent: #{$color-accent};
+    --color-success: #{$color-success};
+    --color-info: #{$color-info};
+    --color-warn: #{$color-warn};
+    --color-danger: #{$color-danger};
+
+    --color-background-main: #fafdff;
+    --color-background-nav-selected: rgba(1, 148, 222, 0.08);
+    --color-background-modal: rgba(0, 0, 0, 0.5);
+    --color-background-success: #{change-color($color-success, $alpha: 0.1)};
+    --color-background-info: #{change-color($color-info, $alpha: 0.1)};
+    --color-background-warn: #{change-color($color-warn, $alpha: 0.1)};
+    --color-background-danger: #{change-color($color-danger, $alpha: 0.1)};
+
+    --color-text-main: #303030;
+    --color-text-accent: #005179;
+    --color-text-muted: rgba(48, 48, 48, 0.75);
+    --color-text-inverted: #f4fbff;
+    --color-text-success: #00843d;
+    --color-text-danger: #cf1d1d;
+
+    --color-border-main: rgba(0, 15, 40, 0.125);
+
+    --color-table-text-main: #55585C;
+    --color-table-text-header: #4C5565;
+    --color-table-border: #DEDEDE;
+
+    --height-header: 80px;
+    --width-app: 1200px;
+    --width-medium: #{$width-medium};
+    --width-large: #{$width-large};
+    --width-navigation: 200px;
+}
