@@ -1,12 +1,24 @@
 {
-  "name": "hemera",
+  "name": "hemera-css",
   "version": "1.0.0",
   "license": "MIT",
+  "main": "src/index.scss",
+  "style": "dist/hemera.css",
+  "repository": "https://github.com/wasdennnoch/Hemera.git",
   "scripts": {
-    "build": "rimraf build/* && sass --load-path=\"./node_modules/normalize.css/\" src/index.scss build/index.css"
+    "start": "npm run build",
+    "build": "npm run clean && npm run build-sass && npm run build-autoprefixer && npm run build-cleancss",
+    "clean": "rimraf dist",
+    "build-sass": "sass --load-path=\"./node_modules/normalize.css/\" src/index.scss dist/hemera.css",
+    "build-autoprefixer": "postcss --use autoprefixer --map false --output dist/hemera.css dist/hemera.css",
+    "build-cleancss": "cleancss -o dist/hemera.min.css dist/hemera.css"
   },
-  "dependencies": {
+  "devDependencies": {
+    "autoprefixer": "^10.3.4",
+    "clean-css-cli": "^5.3.3",
     "normalize.css": "^8.0.1",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
     "rimraf": "^3.0.2",
     "sass": "^1.39.0"
   }
