@@ -1,6 +1,7 @@
 {
   "name": "hemera-css",
   "version": "1.0.0",
+  "author": "wasdennnoch (https://wasdennnoch.me)",
   "license": "MIT",
   "main": "src/index.scss",
   "style": "dist/hemera.css",
